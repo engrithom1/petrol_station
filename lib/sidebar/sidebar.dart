@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:petrol_station/auth/login_page.dart';
 import 'package:petrol_station/config/palette.dart';
 import 'package:petrol_station/sidebar/sidebar_submenu.dart';
 import 'package:rxdart/rxdart.dart';
@@ -219,7 +220,18 @@ class _SideBarState extends State<SideBar>
                         endIndent: 16.w,
                       ),
                       MenuBarItem(icon: Icons.settings, title: "Settings"),
-                      MenuBarItem(icon: Icons.exit_to_app, title: "Logout"),
+                      MenuBarItem(
+                        icon: Icons.exit_to_app,
+                        title: "Logout",
+                        onTap: () {
+                          onIconPressed();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
+                      ),
                     ]),
                   ),
                 ),

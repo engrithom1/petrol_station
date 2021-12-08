@@ -23,12 +23,15 @@ class MyAppBar extends StatelessWidget {
           ),
         ),
       ),
-      title: Text(
-        title,
-        style: TextStyle(
-            color: Palette.mainBlack,
-            fontSize: 30.sp,
-            fontWeight: FontWeight.w900),
+      title: Padding(
+        padding: const EdgeInsets.only(top: 28),
+        child: Text(
+          title,
+          style: TextStyle(
+              color: Palette.mainBlack,
+              fontSize: 25.sp,
+              fontWeight: FontWeight.w600),
+        ),
       ),
     );
   }

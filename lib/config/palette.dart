@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Palette {
   static const Color mainGreen = Color(0xFF35a989);
+  static const Color mainLightGreen = Color(0xFFd2f8d2);
 
   static const Color mainWhite = Color(0xFFFFFFFF);
 
